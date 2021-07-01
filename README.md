@@ -20,11 +20,8 @@ Please cite the above paper in any research publication you may produce using th
 - scipy==1.6.3
 - numpy==1.20.3
 - pandas==1.2.4
-- matplotlib==3.4.2
 - pulp==2.4
-- python_igraph==0.9.6
 - scikit_learn==0.24.2
-- seaborn==0.11.1
 
 ## Usage
 
