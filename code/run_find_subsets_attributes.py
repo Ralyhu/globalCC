@@ -38,7 +38,7 @@ def create_parser():
     return parser
 
 def main(parsed):
-    dataset = parsed.dataset
+    dataset = parsed.dataset_name
     dataset_path = basePath_data + dataset + "/" + dataset + ".csv"
     # set the random seed for reproducibility, in algorithms.py the various algorithms use numpy library to sample integers
     seed = parsed.seed
