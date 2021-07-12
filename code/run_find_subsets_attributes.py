@@ -6,10 +6,6 @@ import random
 import numpy as np
 import pandas as pd
 
-from sklearn.experimental import enable_iterative_imputer
-from sklearn.impute import IterativeImputer
-from numpy import isnan
-
 import constants
 from imputer import DataFrameImputer
 from find_subsets_attributes import heuristic_greedy_find_subsets
@@ -101,33 +97,13 @@ def main(parsed):
         categorical_attributes = set(get_categorical_attributes(df))
         numerical_attributes = list(set(attributes_names).difference(categorical_attributes))
 
-        ####### PLOT  ##########
-        # plot numerical attributes distributions
-        #df.hist(bins=20)
         categorical_features = list(categorical_attributes)
         print(categorical_features)
-        #plot categorical ones
-        #fig, ax = plt.subplots(2, 3)
-        #plt.rc('xtick',labelsize=0.01)
-        #for i in range(2):
-        #   for j in range(3):
-        #        df[categorical_features[i*3+j]].value_counts().plot(kind="bar", ax=ax[i][j]).set_title(categorical_features[i*3+j])
-        #plt.show()
-        #plt.savefig('/Users/domenicomandaglio/VSCode_workspace/figure.pdf')
-        ####### PLOT ##########
-
-        # summarize the number of rows with missing values for each column
-        #for i in categorical_attributes:
-            # count number of rows with missing values
-            #n_miss = df[i].isnull().sum()
-            #perc = n_miss / df.shape[0] * 100
-            #print('> %s, Missing: %d (%.1f%%)' % (i, n_miss, perc))
-        # print total missing
+        
         print('Missing attribute values before imputation: %d' % sum(pd.isnull(df.values).flatten()))
         df = DataFrameImputer().fit_transform(df)
-        # print total missing
         print('Missing attribute values after imputation: %d' % sum(pd.isnull(df.values).flatten()))
-        #print(df.head(test_size))
+        
 
         # compute variation indeces before normalizing 
         # compute variability for each attributes and store in a dict
