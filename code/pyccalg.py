@@ -63,7 +63,6 @@ def _load(dataset_path,random_edgeweight_generation,edge_addition_prob, target_r
 			#generate weights for non-existing edges (with probability 'edge_addition_prob')
 			for uid in graph.keys():
 				for vid in id2vertex.keys():
-					# TODO: typo da segnalare a gullo
 					if uid<vid and vid not in graph[uid] and random.random()<=edge_addition_prob:
 						wp = random.uniform(random_edgeweight_generation[0],random_edgeweight_generation[1])
 						wn = random.uniform(random_edgeweight_generation[0],random_edgeweight_generation[1])
@@ -709,7 +708,6 @@ def main():
 			all_edgeweights_sum = _all_edgeweights_sum(graph)
 			max_edgeweight_gap = _max_edgeweight_gap(graph)
 			print('Global condition (without tot_min): %s >= %s ?' %(all_edgeweights_sum/vertex_pairs,max_edgeweight_gap))
-			# TODO: bug era senza 2 * tot_min
 			print('Global condition (including tot_min): %s >= %s ?' %((all_edgeweights_sum+ 2*tot_min)/vertex_pairs,max_edgeweight_gap))
 			print('Solver: %s' %(solver))
 
