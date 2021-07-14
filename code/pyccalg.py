@@ -815,7 +815,6 @@ def main():
 					if not check_clustering:
 						raise Exception('ERROR: malformed clustering')
 					n_clusters += len(clustering)
-					#print(len(clustering))
 					avg_size_cluster += sum([len(cluster) for cluster in clustering])/len(clustering)
 					cc_cost += _CC_cost(clustering,graph) + tot_min
 				
