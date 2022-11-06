@@ -4,9 +4,9 @@
 
 This project is developed as part of the following research papers:
 
-- D. Mandaglio, A. Tagarelli, F. Gullo (2021). *Correlation Clustering with Global Weight Bounds.* In Procs. of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases, September 13rd - September 17th, 2021, Bilbao, Spain.
+- (1) D. Mandaglio, A. Tagarelli, F. Gullo (2021). *Correlation Clustering with Global Weight Bounds.* In Procs. of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases, September 13rd - September 17th, 2021, Bilbao, Spain.
 
-- F. Gullo, L. La Cava, D. Mandaglio, A. Tagarelli (2022) . *When Correlation Clustering Meets Fairness Constraints.* In Procs. of the International Conference on Discovery Science, October 10-12, 2022, Montpellier, France.
+- (2) F. Gullo, L. La Cava, D. Mandaglio, A. Tagarelli (2022) . *When Correlation Clustering Meets Fairness Constraints.* In Procs. of the International Conference on Discovery Science, October 10-12, 2022, Montpellier, France.
 
 Please cite the above papers in any research publication you may produce using this code or data/analysis derived from it.
 
@@ -27,7 +27,7 @@ Please cite the above papers in any research publication you may produce using t
 
 ## Usage
 
-### Reproducing global-weight-bounds results (Section 5.1 of the paper)
+### Reproducing global-weight-bounds results (Section 5.1 of the paper (1))
 
 ``` python src/pyccalg.py -d <DATASET_FILE> [-r <LB,UB>] [-a <PROB>] [-s {'pulp','scipy'}] [-m {'charikar','demaine','kwik'}] [-t <targetratio>]```
 
@@ -46,7 +46,7 @@ The above command will run both Pivot algorithm and the selected O(logn)-approxi
 
 The original implementation of the 'pyccalg.py' can be found at https://github.com/fgullo/pyccalg
 
-### Reproducing fairness clustering results (Section 5.2 of the paper)
+### Reproducing fairness clustering results (Section 5.2 of the paper (2))
 
 From the folder 'global-CC/code', run the following command:
 
