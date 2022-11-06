@@ -8,7 +8,7 @@ This project is developed as part of the following research papers:
 
 - F. Gullo, L. La Cava, D. Mandaglio, A. Tagarelli (2022) . *When Correlation Clustering Meets Fairness Constraints.* In Procs. of the International Conference on Discovery Science, October 10-12, 2022, Montpellier, France.
 
-Please cite the above paper in any research publication you may produce using this code or data/analysis derived from it.
+Please cite the above papers in any research publication you may produce using this code or data/analysis derived from it.
 
 
 ## Folders
