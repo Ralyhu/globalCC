@@ -70,6 +70,8 @@ arguments:
 ```
 Default values for -s and -i correspond to the settings relating to the results presented in the paper.
 
+The above command will run the select heuristic and, at each iteration, also the Pivot algorithm with the current subsets of attributes. The output is stored in a text files in a subdirectory in the 'output_fairness/' folder. For each of these files, row i contains the results corresponding to the clustering yielded by the Pivot algorithm at the i-th iteration.
+
 Mapping between heuristic name (used in the paper) and parameter choice:
 - Hlv: ``` python run_find_subsets_attributes.py -d 'dataset' -r False -b False ```
 - Hlv_B: ``` python run_find_subsets_attributes.py -d 'dataset' -r False``` 
@@ -79,4 +81,4 @@ Mapping between heuristic name (used in the paper) and parameter choice:
 - Hmv_SW: ``` python run_find_subsets_attributes.py -d 'dataset' -bc``` 
 - Greedy: ``` python run_find_subsets_attributes.py -g``` 
 
-Important note: customizing the set of non-sensitive and sensitive attributes can be done by modifying the variable 'initial_subset' in 'global-CC/code/constants.py'.
+Important note: customizing the set of non-sensitive and sensitive attributes can be done by modifying the variable 'initial_subset' in 'global-CC/code/constants.py'. If you are interested in performing just a fair clustering task (with no interest in the subsets discovery part) just run the above command (with any heuristic) and consider the results corresponding to the first iteration, corresponding to the initial attributes subsets specified in the 'global-CC/code/constants.py' file.
