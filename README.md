@@ -2,9 +2,11 @@
 
 ## Overview
 
-This project is developed as part of the following research paper:
+This project is developed as part of the following research papers:
 
-D. Mandaglio, A. Tagarelli, F. Gullo (2021). *Correlation Clustering with Global Weight Bounds.* In Procs. of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases, September 13rd - September 17th, 2021, Bilbao, Spain.
+- D. Mandaglio, A. Tagarelli, F. Gullo (2021). *Correlation Clustering with Global Weight Bounds.* In Procs. of the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases, September 13rd - September 17th, 2021, Bilbao, Spain.
+
+- F. Gullo, L. La Cava, D. Mandaglio, A. Tagarelli (2022) . *When Correlation Clustering Meets Fairness Constraints.* In Procs. of the International Conference on Discovery Science, October 10-12, 2022, Montpellier, France.
 
 Please cite the above paper in any research publication you may produce using this code or data/analysis derived from it.
 
@@ -76,3 +78,5 @@ Mapping between heuristic name (used in the paper) and parameter choice:
 - Hlv_BW: ``` python run_find_subsets_attributes.py -d 'dataset' -r False -bc``` 
 - Hmv_SW: ``` python run_find_subsets_attributes.py -d 'dataset' -bc``` 
 - Greedy: ``` python run_find_subsets_attributes.py -g``` 
+
+Important note: customizing the set of non-sensitive and sensitive attributes can be done by modifying the variable 'initial_subset' in 'global-CC/code/constants.py'.
